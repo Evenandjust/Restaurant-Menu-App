@@ -18,6 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 
+// Digital menu -> show a recycler view of available dishes
 public class MenuActivity extends AppCompatActivity {
 
     private RecyclerView myDishList;
@@ -60,17 +61,12 @@ public class MenuActivity extends AppCompatActivity {
         ) {
             @Override
             protected void populateViewHolder(DishViewHolder viewHolder, Dish model, int position) {
-//                viewHolder.setName(model.getName());
-//                viewHolder.setDetails(model.getDetails());
-//                viewHolder.setPrice(model.getPrice());
-//                viewHolder.setImage(getApplicationContext(), model.getImage());
-
                 viewHolder.dishName.setText(model.getDishName());
                 viewHolder.dishDetails.setText(model.getDishDetails());
                 viewHolder.dishPrice.setText(model.getDishPrice());
                 Picasso.with(getApplicationContext()).load(model.getDishImage()).fit().into(viewHolder.dishImage);
 
-                // Add onclick listener to the list item
+                // Add onclick listener to the list item, when one is clicked, direct user to SingleDishActivity
                 final String dishKey = getRef(position).getKey().toString();
                 viewHolder.myView.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -102,26 +98,6 @@ public class MenuActivity extends AppCompatActivity {
             dishPrice = (TextView) itemView.findViewById(R.id.dishPrice);
             dishImage = (ImageView) itemView.findViewById(R.id.dishImage);
         }
-
-//        public void setName(String name){
-//            TextView dishName = (TextView) itemView.findViewById(R.id.dishName);
-//            dishName.setText(name);
-//        }
-//
-//        public void setDetails(String details){
-//            TextView dishDetails = (TextView) itemView.findViewById(R.id.dishDetails);
-//            dishDetails.setText(details);
-//        }
-//
-//        public void setPrice(String price){
-//            TextView dishPrice = (TextView) itemView.findViewById(R.id.dishPrice);
-//            dishPrice.setText(price);
-//        }
-//
-//        public void setImage(Context context, String image){
-//            ImageView dishImage = (ImageView) itemView.findViewById(R.id.dishImage);
-//            Picasso.with(context).load(image).into(dishImage);
-//        }
     }
 
 }
