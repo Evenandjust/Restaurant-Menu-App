@@ -18,6 +18,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+// Add dish to Firebase database
 public class AddDish extends AppCompatActivity {
 
     private ImageButton dishImage;
@@ -42,6 +43,7 @@ public class AddDish extends AppCompatActivity {
 
     }
 
+    // Select an image to upload when imageButton clicked
     public void imageButtonClicked(View view){
         Intent galleryIntent = new Intent(Intent.ACTION_GET_CONTENT);
         galleryIntent.setType("image/*");
@@ -58,6 +60,7 @@ public class AddDish extends AppCompatActivity {
         }
     }
 
+    // Upload the typed in texts, such as dishName, dishDetails, dishPrice, to the database
     public void addDishToMenu(View view){
         final String dish_name = dishName.getText().toString().trim();
         final String dish_details = dishDetails.getText().toString().trim();
@@ -71,6 +74,8 @@ public class AddDish extends AppCompatActivity {
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                     @SuppressWarnings("VisibleForTests") final Uri downloadUrl = taskSnapshot.getDownloadUrl();
                     Toast.makeText(AddDish.this, "Image Uploaded!", Toast.LENGTH_LONG).show();
+                    
+                    // Construct nodes in database
                     final DatabaseReference newPost = myDBRef.push();  // post a new item
                     newPost.child("dishName").setValue(dish_name);
                     newPost.child("dishDetails").setValue(dish_details);
