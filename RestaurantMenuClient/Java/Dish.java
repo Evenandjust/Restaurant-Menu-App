@@ -1,9 +1,10 @@
 package com.franks.restaurantmenuclient;
 
 /**
- * Created by even_and_just on 10/17/17.
+ * Created by Frank on 10/17/17.
  */
 
+// Define a class for Dish
 public class Dish {
     private String dishName;
     private String dishDetails;
