@@ -11,7 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 /*
- * @ Written By: even_and_just
+ * @ Written By: Frank
  * @ Date: 10/16/2017
  * @ Function: Digital Menu for restaurant (Owner use)
  */
