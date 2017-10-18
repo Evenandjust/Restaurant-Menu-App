@@ -9,3 +9,5 @@ Owner can use this app to upload image and information of dishes to Firebase dat
 2. Restaurant Menu Client: this is the client side version.
 
 Clients need to sign up an account first. Then after they sign in, they have access to the digital menu. They can look at the details of each dish, choose what they like and add to their order. Then the orders will be uploaded to Firebase database. Restaurant owner can know what current orders are from the database data via this app's owner version.
+
+(Create these two android apps with reference to tutorials online.)
