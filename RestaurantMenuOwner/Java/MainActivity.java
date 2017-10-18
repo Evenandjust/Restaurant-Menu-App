@@ -11,7 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 /*
- * @ Created By: Frank
+ * @ Written By: even_and_just
  * @ Date: 10/16/2017
  * @ Function: Digital Menu for restaurant (Owner use)
  */
@@ -35,12 +35,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
+    // When owner click on the addDish button, direct him/her to AddDish activity.
     public void addDishButtonClicked(View view){
         Intent addDishIntent = new Intent(MainActivity.this, AddDish.class);
         startActivity(addDishIntent);
     }
 
+    // When owner click on the viewOrders button, direct him/her to ViewOrders activity.
     public void viewOrdersButtonClicked(View view){
         Intent viewOrders = new Intent(MainActivity.this, ViewOrders.class);
         startActivity(viewOrders);
