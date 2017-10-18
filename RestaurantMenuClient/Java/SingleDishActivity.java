@@ -20,6 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+// When user hit one dish in the menu, he/she will be direct to this screen to see details of this specific dish.
 public class SingleDishActivity extends AppCompatActivity {
 
     private String singleDishKey = null;
@@ -78,6 +79,7 @@ public class SingleDishActivity extends AppCompatActivity {
         });
     }
 
+    // Add current dish to order
     public void addItemClicked(View view){
         final DatabaseReference newOrder = myOrdersRef.push();
         userData.addValueEventListener(new ValueEventListener() {
