@@ -1,9 +1,10 @@
 package com.franks.restaurantmenu;
 
 /**
- * Created by even_and_just on 10/17/17.
+ * Created by Frank on 10/17/17.
  */
 
+// Define a class for order
 public class Order {
     // Be the same with vars name in the database
     private String username;
