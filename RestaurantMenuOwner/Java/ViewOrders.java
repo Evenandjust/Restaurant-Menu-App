@@ -31,6 +31,8 @@ public class ViewOrders extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        
+        // Customize recycler adapter and populate recycler view of orders
         FirebaseRecyclerAdapter<Order, OrderViewHolder> fRAdapter = new FirebaseRecyclerAdapter<Order, OrderViewHolder>(
                 Order.class, R.layout.singleorder, OrderViewHolder.class, myDBRef
         ) {
