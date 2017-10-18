@@ -69,8 +69,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-//                Log.w(TAG, "loadPost:onCancelled", databaseError.toException());
-                System.out.println(databaseError.toException().toString());
+
             }
         });
     }
