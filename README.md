@@ -1,6 +1,6 @@
 # Restaurant-Menu-App
 
-This is a pair of simple version Android Apps for restaurant owners and clients to use. 
+This is a pair of Android Apps for restaurant owners and clients to use. 
 
 1. Restaurant Menu Owner: this is the owner side version. 
 
